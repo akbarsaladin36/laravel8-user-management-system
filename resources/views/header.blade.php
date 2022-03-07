@@ -29,7 +29,7 @@
               <a class="nav-link" aria-current="page" href="{{ route('all-users.admin') }}">All Users</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">All Notes</a>
+              <a class="nav-link" aria-current="page" href="{{ route('all-notes.admin') }}">All Notes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#">All Attendances</a>
