@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminAllAttendancesController;
 use App\Http\Controllers\Admin\AdminAllNotesController;
 use App\Http\Controllers\Admin\AdminAllUsersController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
@@ -56,5 +57,8 @@ Route::delete('/admin/all-users/user/delete/{id}', [AdminAllUsersController::cla
 Route::get('/admin/all-notes', [AdminAllNotesController::class, 'index'])->name('all-notes.admin');
 Route::get('/admin/all-notes/note/{id}', [AdminAllNotesController::class, 'show'])->name('all-notes.show.admin');
 Route::delete('/admin/all-notes/note/delete/{id}', [AdminAllNotesController::class, 'delete'])->name('all-notes.delete.admin');
+
+Route::get('/admin/all-attendances', [AdminAllAttendancesController::class, 'index'])->name('all-attendances.admin');
+Route::delete('admin/all-attendances/delete/{id}', [AdminAllAttendancesController::class, 'delete'])->name('all-attendances.delete.admin');
 
 Route::get('/admin/logout', [AdminHomeController::class, 'logout'])->name('admin.logout');

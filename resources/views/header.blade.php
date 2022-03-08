@@ -32,7 +32,7 @@
               <a class="nav-link" aria-current="page" href="{{ route('all-notes.admin') }}">All Notes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">All Attendances</a>
+              <a class="nav-link" aria-current="page" href="{{ route('all-attendances.admin') }}">All Attendances</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
