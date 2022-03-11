@@ -14,7 +14,6 @@ class AdminAllAttendancesController extends Controller
         if(Session::has('admin')) {
             $no = 1;
             $attendances = Attendance::join('users','attendances.user_id','=','users.id')->where('attendances.attendance_status', 'completed')->get();
-            // dd($attendances);
             return view('admin.all-attendances.index',['attendances'=>$attendances,'no'=>$no]);
         } else {
             return redirect()->route('auth.login.index');

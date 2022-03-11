@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminAllAttendancesController;
 use App\Http\Controllers\Admin\AdminAllNotesController;
 use App\Http\Controllers\Admin\AdminAllUsersController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\Auth\LoginController;
@@ -48,6 +49,10 @@ Route::get('/logout', [HomeController::class, 'logout'])->name('user.logout');
 
 // Admin 
 Route::get('/admin/dashboard', [AdminHomeController::class, 'index'])->name('home.admin');
+
+Route::get('/admin/profile', [AdminController::class, 'show'])->name('profile.admin');
+Route::get('/admin/profile/edit', [AdminController::class, 'edit'])->name('profile.edit.admin');
+Route::patch('/admin/profile/update', [AdminController::class, 'update'])->name('profile.update.admin');
 
 Route::get('/admin/all-users', [AdminAllUsersController::class, 'index'])->name('all-users.admin');
 Route::get('/admin/all-users/create-user', [AdminAllUsersController::class, 'create'])->name('all-users.create.admin');
